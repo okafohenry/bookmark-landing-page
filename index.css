@@ -1,0 +1,16 @@
+:root{
+	--grayish-blue: hsl(229, 8%, 60%);
+	--very-dark-blue: hsl(229, 31%, 21%);
+	--soft-blue: hsl(231, 69%, 60%);
+	--soft-red: hsl(0, 94%, 66%);
+	--white: #fff;
+}
+
+body{
+	margin: 0;
+	font-family: "Rubik";
+}
+
+li{
+	list-style: none;
+}
