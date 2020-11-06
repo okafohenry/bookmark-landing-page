@@ -3,6 +3,7 @@
 	--very-dark-blue: hsl(229, 31%, 21%);
 	--soft-blue: hsl(231, 69%, 60%);
 	--soft-red: hsl(0, 94%, 66%);
+	--soft-gray: hsl(0, 0%, 95%);
 	--white: #fff;
 }
 
@@ -12,6 +13,7 @@ body{
 }
 main, footer{
 	text-align: center;
+	margin-bottom: 0;
 }
 
 li{
@@ -28,18 +30,63 @@ li{
 	right: 0;
 	z-index: -1;
 }
-.main_info_ p, .hamburger a{	
+.hamburger a{	
 	color: var(--grayish-blue);
 }
 
+.main_info_section2 h3, .features__ h4, 
+.browser_ext__ h4, .chrome_ h5, .firefox_ h5, .opera_ h5, .faq_ h4{
+	margin-bottom: 0px;
+	letter-spacing: 0.5px;
+}
+.features__ h4,.browser_ext__ h4, .faq_ h4{
+	font-size: 30px;
+}
+.main_info_ p, .features__ p, .browser_ext__ p, .faq_ p{	
+	color: var(--grayish-blue);
+	font-size: 18px;
+	line-height: 1.8rem !important;
+	letter-spacing: 0.5px;
+}
+.main_info_section2 a{
+	text-decoration: none;
+}
 a.get_on_chrome_link{
 	background: var(--soft-blue);
 	color: var(--white);
 	box-shadow: 0px 5px 7px #bec6f3;
 }
-.get_on_firefox{
-		
+a.get_on_firefox_link{
+	background: var(--soft-gray);
+	color: #808080;
+	box-shadow: 0px 5px 7px #cccccc;
 }
+.newsletter__{
+	color: var(--white);
+}
+.newsletter__textbox, .newsletter__btn{
+	padding: 15px;
+	border-radius: .3rem;
+	border: none;
+}
+.newsletter__textbox::placeholder{
+	font-family: 'rubik';
+	font-size: 15px;
+	letter-spacing: .5px;
+}
+.newsletter__btn{
+ 	font-family: "rubik";
+	font-size: 15px;
+	letter-spacing: .5px;
+	color: var(--white);
+	background: var(--soft-red);
+ }
+ footer{
+ 	background: var(--very-dark-blue);
+ 	margin-top: 0;
+ }
+
+
 
 
 @media screen and (max-width: 450px){
@@ -53,9 +100,8 @@ a.get_on_chrome_link{
 		float: right;
 	}
 
-
+/************* SECTION 1 *****************/
 	.main_info_{
-		width: 100%;
 		padding-top: 20px;
 	}
 	.tab_illustrator1{
@@ -66,18 +112,11 @@ a.get_on_chrome_link{
   		margin-right: auto;
 	}
 	.main_info_section2{
-		padding: 20px;
+		padding: 20px 35px 20px 35px;
 		display: inline-grid;
 	}
 	.main_info_section2 h3{
-		margin-bottom: 0px;
-		font-size: 30px;
-		letter-spacing: 0.45px;
-	}
-	.main_info_section2 p{
-		font-size: 18px;
-		line-height: 1.5rem !important;
-		letter-spacing: 0.3px;
+		font-size: 34px;
 	}
 	.main_info_section2 ul{
 		padding-left: 0;
@@ -86,14 +125,124 @@ a.get_on_chrome_link{
 		display: inline-grid;
 	}
 	.main_info_section2 a{
-		text-decoration: none;
+		margin-top: 10px;
 		padding: 15px;
 		border-radius: .3rem;
 		letter-spacing: 0.3px;
+		font-weight: bold;
 	}
-	.gof{
-		position: relative;
-		left: 10px;
+	.goc, .gof{
+		padding: .5rem .7rem !important;
 	}
 
+
+/*********** SECTION 2 ************/
+	.features__{
+		padding: 50px 35px 30px 35px;
+	}
+
+/************ SECTION 3 ************/
+	.browser_ext__{
+		padding: 50px 35px 30px 35px;
+	}
+	.browser_ext__ p{
+		margin-top: 20px;
+		padding-bottom: 20px;
+	}
+	.browser_ext__ button{
+		margin-top: 20px;		
+		font-family: 'rubik';
+		font-size: 16px;
+		font-weight: 500;
+		padding: 15px 45px;
+		background: var(--soft-blue);
+		color: var(--white);
+		border: none;
+		border-radius: .3rem;
+		letter-spacing: .5px;
+	}
+	.chrome_, .firefox_, .opera_{
+		width: 100%;
+		margin-top: 30px;
+		padding-top: 70px;
+		padding-bottom: 30px;
+		border-radius: .7rem;
+		box-shadow: 0px 10px 20px 3px #f2f2f2;
+	}
+	.chrome_ h5, .firefox_ h5, .opera_ h5{
+		font-size: 25px;
+	}
+
+/************* SECTION 4 *************/
+	.faq_{
+		padding: 3rem 1.7rem !important;
+	}
+	.faq_links{
+		width: 100%;
+		margin-top: 30px;
+		position: relative;
+		right: 5px;
+	}
+	.faq_links div{
+		width: 95%;
+		padding: 15px 10px 35px 10px;
+		color: green;
+		cursor: pointer;
+		border-bottom: 1px solid var(--soft-gray);
+	}
+	 span.drop-down{
+		text-decoration: none;
+		float: left;
+		font-size: 16px;
+		font-weight: bold;
+		color: #525560;
+		letter-spacing: 0.2px;
+	}
+	.fa-angle-down{
+		float: right;
+		color: var(--soft-blue);
+		font-size: 16px;
+		font-weight: 500;
+	}
+	.faq_more_info{
+		clear: both;
+		margin-top: 70px;
+	}
+	.faq_more_info a{
+		padding: 17px 25px;
+		background: var(--soft-blue);
+		text-decoration: none;
+		color: var(--white);
+		letter-spacing: .5px;
+		border-radius: .2rem;
+		box-shadow: 0px 5px 7px #bec6f3;
+	}
+/************** SECTION 5 ***************/
+	.newsletter__{
+		background: var(--soft-blue);
+		margin-top: 100px;
+		padding: 3rem 2rem 4rem 2rem;
+	}
+	.newsletter__ p{
+		font-size: 14px;
+		letter-spacing: 5px;
+	}
+	.newsletter__ h3{
+		font-size: 27px;		
+		letter-spacing: .7px;
+	}
+	.newsletter__contact_form{
+	}
+	.newsletter__textbox{
+		width: 90%;
+	}
+	 .newsletter__btn{
+	 	width: 98%;	 	
+	 	margin-top: 20px;
+	 }
+
+/************** FOOTER ***************/
+	footer{
+		padding: 10px 0px;
+	}
 }
